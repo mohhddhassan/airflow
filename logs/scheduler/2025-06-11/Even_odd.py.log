@@ -1,0 +1,11 @@
+[2025-06-11T05:27:48.986+0000] {processor.py:161} INFO - Started process (PID=2411) to work on /opt/airflow/dags/Even_odd.py
+[2025-06-11T05:27:48.986+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/Even_odd.py for tasks to queue
+[2025-06-11T05:27:48.988+0000] {logging_mixin.py:188} INFO - [2025-06-11T05:27:48.988+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/Even_odd.py
+[2025-06-11T05:27:48.997+0000] {processor.py:840} INFO - DAG(s) 'even_odd_branching_example' retrieved from /opt/airflow/dags/Even_odd.py
+[2025-06-11T05:27:49.107+0000] {logging_mixin.py:188} INFO - [2025-06-11T05:27:49.106+0000] {override.py:1829} INFO - Created Permission View: can delete on DAG:even_odd_branching_example
+[2025-06-11T05:27:49.116+0000] {logging_mixin.py:188} INFO - [2025-06-11T05:27:49.115+0000] {override.py:1829} INFO - Created Permission View: can read on DAG:even_odd_branching_example
+[2025-06-11T05:27:49.121+0000] {logging_mixin.py:188} INFO - [2025-06-11T05:27:49.121+0000] {override.py:1829} INFO - Created Permission View: can edit on DAG:even_odd_branching_example
+[2025-06-11T05:27:49.122+0000] {logging_mixin.py:188} INFO - [2025-06-11T05:27:49.122+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-11T05:27:49.133+0000] {logging_mixin.py:188} INFO - [2025-06-11T05:27:49.132+0000] {dag.py:3118} INFO - Creating ORM DAG for even_odd_branching_example
+[2025-06-11T05:27:49.144+0000] {logging_mixin.py:188} INFO - [2025-06-11T05:27:49.144+0000] {dag.py:3954} INFO - Setting next_dagrun for even_odd_branching_example to 2025-06-11 04:00:00+00:00, run_after=2025-06-11 05:00:00+00:00
+[2025-06-11T05:27:49.158+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/Even_odd.py took 0.179 seconds

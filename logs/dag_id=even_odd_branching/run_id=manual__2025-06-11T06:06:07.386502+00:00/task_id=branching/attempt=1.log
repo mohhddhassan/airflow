@@ -1,0 +1,24 @@
+[2025-06-11T06:06:09.986+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-11T06:06:10.010+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: even_odd_branching.branching manual__2025-06-11T06:06:07.386502+00:00 [queued]>
+[2025-06-11T06:06:10.017+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: even_odd_branching.branching manual__2025-06-11T06:06:07.386502+00:00 [queued]>
+[2025-06-11T06:06:10.017+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-06-11T06:06:10.031+0000] {taskinstance.py:2330} INFO - Executing <Task(BranchPythonOperator): branching> on 2025-06-11 06:06:07.386502+00:00
+[2025-06-11T06:06:10.042+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=544) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-11T06:06:10.044+0000] {standard_task_runner.py:63} INFO - Started process 548 to run task
+[2025-06-11T06:06:10.044+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'even_odd_branching', 'branching', 'manual__2025-06-11T06:06:07.386502+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/even_odd_branching.py', '--cfg-path', '/tmp/tmp170d4y07']
+[2025-06-11T06:06:10.047+0000] {standard_task_runner.py:91} INFO - Job 30: Subtask branching
+[2025-06-11T06:06:10.093+0000] {task_command.py:426} INFO - Running <TaskInstance: even_odd_branching.branching manual__2025-06-11T06:06:07.386502+00:00 [running]> on host 84435f84cb56
+[2025-06-11T06:06:10.185+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='even_odd_branching' AIRFLOW_CTX_TASK_ID='branching' AIRFLOW_CTX_EXECUTION_DATE='2025-06-11T06:06:07.386502+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-11T06:06:07.386502+00:00'
+[2025-06-11T06:06:10.186+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-11T06:06:10.187+0000] {baseoperator.py:399} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2025-06-11T06:06:10.187+0000] {python.py:237} INFO - Done. Returned value was: odd_task
+[2025-06-11T06:06:10.188+0000] {branch.py:36} INFO - Branch into odd_task
+[2025-06-11T06:06:10.188+0000] {skipmixin.py:178} INFO - Following branch odd_task
+[2025-06-11T06:06:10.209+0000] {skipmixin.py:246} INFO - Skipping tasks [('even_task', -1)]
+[2025-06-11T06:06:10.233+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-11T06:06:10.253+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=even_odd_branching, task_id=branching, run_id=manual__2025-06-11T06:06:07.386502+00:00, execution_date=20250611T060607, start_date=20250611T060610, end_date=20250611T060610
+[2025-06-11T06:06:10.297+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-11T06:06:10.325+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-06-11T06:06:10.326+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

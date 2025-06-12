@@ -1,0 +1,164 @@
+[2025-06-12T07:05:01.534+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-12T07:05:01.556+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clickhouse_metrics_checker.check_metrics_row_count scheduled__2025-06-12T07:00:00+00:00 [queued]>
+[2025-06-12T07:05:01.562+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clickhouse_metrics_checker.check_metrics_row_count scheduled__2025-06-12T07:00:00+00:00 [queued]>
+[2025-06-12T07:05:01.563+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-06-12T07:05:01.575+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_metrics_row_count> on 2025-06-12 07:00:00+00:00
+[2025-06-12T07:05:01.585+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=696) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-12T07:05:01.586+0000] {standard_task_runner.py:63} INFO - Started process 698 to run task
+[2025-06-12T07:05:01.586+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'clickhouse_metrics_checker', 'check_metrics_row_count', 'scheduled__2025-06-12T07:00:00+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/clickhouse_metrics_dag.py', '--cfg-path', '/tmp/tmpuzsl3lsj']
+[2025-06-12T07:05:01.588+0000] {standard_task_runner.py:91} INFO - Job 21: Subtask check_metrics_row_count
+[2025-06-12T07:05:01.630+0000] {task_command.py:426} INFO - Running <TaskInstance: clickhouse_metrics_checker.check_metrics_row_count scheduled__2025-06-12T07:00:00+00:00 [running]> on host 2e2ba54faad1
+[2025-06-12T07:05:01.709+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='clickhouse_metrics_checker' AIRFLOW_CTX_TASK_ID='check_metrics_row_count' AIRFLOW_CTX_EXECUTION_DATE='2025-06-12T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-12T07:00:00+00:00'
+[2025-06-12T07:05:01.710+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-12T07:05:01.725+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-12T07:05:01.725+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/clickhouse_metrics_dag.py", line 13, in query_clickhouse
+    client = clickhouse_connect.get_client(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/__init__.py", line 122, in create_client
+    return HttpClient(interface, host, port, username, password, database, access_token,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/httpclient.py", line 165, in __init__
+    super().__init__(database=database,
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/client.py", line 70, in __init__
+    self._init_common_settings(apply_server_timezone)
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/client.py", line 75, in _init_common_settings
+    tuple(self.command('SELECT version(), timezone()', use_database=False))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/httpclient.py", line 368, in command
+    response = self._raw_request(payload, params, headers, method, fields=fields, server_wait=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/httpclient.py", line 481, in _raw_request
+    self._error_handler(response)
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/httpclient.py", line 402, in _error_handler
+    raise OperationalError(err_str) if retried else DatabaseError(err_str) from None
+clickhouse_connect.driver.exceptions.DatabaseError: HTTPDriver for http://clickhouse:8123 received ClickHouse error code 194
+ Code: 194. DB::Exception: default: Authentication failed: password is incorrect, or there is no user with such name.
+
+If you use ClickHouse Cloud, the password can be reset at https://clickhouse.cloud/
+on the settings page for the corresponding service.
+
+If you have installed ClickHouse and forgot password you can reset it in the configuration file.
+The password for default user is typically located at /etc/clickhouse-server/users.d/default-password.xml
+and deleting this file will reset the password.
+See also /etc/clickhouse-server/users.xml on the server where ClickHouse is installed.
+
+. (REQUIRED_PASSWORD) (version 25.5.2.47 (official build))
+
+[2025-06-12T07:05:01.738+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=clickhouse_metrics_checker, task_id=check_metrics_row_count, run_id=scheduled__2025-06-12T07:00:00+00:00, execution_date=20250612T070000, start_date=20250612T070501, end_date=20250612T070501
+[2025-06-12T07:05:01.749+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 21 for task check_metrics_row_count (HTTPDriver for http://clickhouse:8123 received ClickHouse error code 194
+ Code: 194. DB::Exception: default: Authentication failed: password is incorrect, or there is no user with such name.
+
+If you use ClickHouse Cloud, the password can be reset at https://clickhouse.cloud/
+on the settings page for the corresponding service.
+
+If you have installed ClickHouse and forgot password you can reset it in the configuration file.
+The password for default user is typically located at /etc/clickhouse-server/users.d/default-password.xml
+and deleting this file will reset the password.
+See also /etc/clickhouse-server/users.xml on the server where ClickHouse is installed.
+
+. (REQUIRED_PASSWORD) (version 25.5.2.47 (official build))
+; 698)
+[2025-06-12T07:05:01.760+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-12T07:05:01.790+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-12T07:05:01.792+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2025-06-12T08:23:51.107+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-12T08:23:51.133+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clickhouse_metrics_checker.check_metrics_row_count scheduled__2025-06-12T07:00:00+00:00 [queued]>
+[2025-06-12T08:23:51.142+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clickhouse_metrics_checker.check_metrics_row_count scheduled__2025-06-12T07:00:00+00:00 [queued]>
+[2025-06-12T08:23:51.142+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-06-12T08:23:51.156+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): check_metrics_row_count> on 2025-06-12 07:00:00+00:00
+[2025-06-12T08:23:51.166+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=363) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-12T08:23:51.168+0000] {standard_task_runner.py:63} INFO - Started process 365 to run task
+[2025-06-12T08:23:51.170+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'clickhouse_metrics_checker', 'check_metrics_row_count', 'scheduled__2025-06-12T07:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/clickhouse_metrics_dag.py', '--cfg-path', '/tmp/tmp_vch1369']
+[2025-06-12T08:23:51.174+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask check_metrics_row_count
+[2025-06-12T08:23:51.224+0000] {task_command.py:426} INFO - Running <TaskInstance: clickhouse_metrics_checker.check_metrics_row_count scheduled__2025-06-12T07:00:00+00:00 [running]> on host 48004b2e4c74
+[2025-06-12T08:23:51.307+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='clickhouse_metrics_checker' AIRFLOW_CTX_TASK_ID='check_metrics_row_count' AIRFLOW_CTX_EXECUTION_DATE='2025-06-12T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-06-12T07:00:00+00:00'
+[2025-06-12T08:23:51.308+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-12T08:23:51.326+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-12T08:23:51.326+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/clickhouse_metrics_dag.py", line 13, in query_clickhouse
+    client = clickhouse_connect.get_client(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/__init__.py", line 122, in create_client
+    return HttpClient(interface, host, port, username, password, database, access_token,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/httpclient.py", line 165, in __init__
+    super().__init__(database=database,
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/client.py", line 70, in __init__
+    self._init_common_settings(apply_server_timezone)
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/client.py", line 75, in _init_common_settings
+    tuple(self.command('SELECT version(), timezone()', use_database=False))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/httpclient.py", line 368, in command
+    response = self._raw_request(payload, params, headers, method, fields=fields, server_wait=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/httpclient.py", line 481, in _raw_request
+    self._error_handler(response)
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/httpclient.py", line 402, in _error_handler
+    raise OperationalError(err_str) if retried else DatabaseError(err_str) from None
+clickhouse_connect.driver.exceptions.DatabaseError: HTTPDriver for http://clickhouse:8123 received ClickHouse error code 194
+ Code: 194. DB::Exception: default: Authentication failed: password is incorrect, or there is no user with such name.
+
+If you use ClickHouse Cloud, the password can be reset at https://clickhouse.cloud/
+on the settings page for the corresponding service.
+
+If you have installed ClickHouse and forgot password you can reset it in the configuration file.
+The password for default user is typically located at /etc/clickhouse-server/users.d/default-password.xml
+and deleting this file will reset the password.
+See also /etc/clickhouse-server/users.xml on the server where ClickHouse is installed.
+
+. (REQUIRED_PASSWORD) (version 25.5.2.47 (official build))
+
+[2025-06-12T08:23:51.339+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=clickhouse_metrics_checker, task_id=check_metrics_row_count, run_id=scheduled__2025-06-12T07:00:00+00:00, execution_date=20250612T070000, start_date=20250612T082351, end_date=20250612T082351
+[2025-06-12T08:23:51.352+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 7 for task check_metrics_row_count (HTTPDriver for http://clickhouse:8123 received ClickHouse error code 194
+ Code: 194. DB::Exception: default: Authentication failed: password is incorrect, or there is no user with such name.
+
+If you use ClickHouse Cloud, the password can be reset at https://clickhouse.cloud/
+on the settings page for the corresponding service.
+
+If you have installed ClickHouse and forgot password you can reset it in the configuration file.
+The password for default user is typically located at /etc/clickhouse-server/users.d/default-password.xml
+and deleting this file will reset the password.
+See also /etc/clickhouse-server/users.xml on the server where ClickHouse is installed.
+
+. (REQUIRED_PASSWORD) (version 25.5.2.47 (official build))
+; 365)
+[2025-06-12T08:23:51.381+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-06-12T08:23:51.411+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-12T08:23:51.412+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
