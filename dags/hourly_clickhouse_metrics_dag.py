@@ -7,9 +7,9 @@ import sys
 sys.path.append('/opt/airflow/scripts')
 from extract_clickhouse_metrics import extract_and_save_metrics
 
+
 default_args = {
-    'owner': 'hussain',
-    'depends_on_past': False,
+    'owner': 'airflow',
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
 }

@@ -5,26 +5,18 @@ from datetime import datetime
 def extract_and_save_metrics(execution_time: str):
     # Connect to ClickHouse
     client = clickhouse_connect.get_client(
-        host='clickhouse',       # service name from docker-compose
+        host='clickhouse-server',       # service name from docker-compose
         user='airflow',
         password='airflow_pass',
         database='system'
     )
 
-    # Query to get metrics
-    query = """
-        SELECT 
-            now() AS timestamp,
-            description AS metric_name,
-            value
-        FROM system.metrics
-    """
-
-    # Execute the query
-    data = client.execute(query)
+    # Query system metrics
+    result = client.query("SELECT now() AS timestamp, description AS metric_name, value FROM system.metrics")
+    rows = result.result_rows
 
     # Create DataFrame
-    df = pd.DataFrame(data, columns=['timestamp', 'metric_name', 'value'])
+    df = pd.DataFrame(rows, columns=['timestamp', 'metric_name', 'value'])
 
     # Add DAG execution time
     dag_time = datetime.fromisoformat(execution_time)

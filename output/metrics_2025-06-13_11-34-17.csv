@@ -1,0 +1,371 @@
+timestamp,metric_name,value,dag_run_time
+2025-06-13 11:34:19,Number of executing queries,1,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of executing background merges,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of source parts participating in current background merges,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of currently executing moves,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of mutations (ALTER DELETE/UPDATE),0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of data parts being fetched from replica,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of data parts being sent to replicas,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of data parts checking for consistency,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active merges and mutations in an associated background pool,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Limit on number of active merges and mutations in an associated background pool,32,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active fetches in an associated background pool,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Limit on number of simultaneous fetches in an associated background pool,16,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active tasks in an associated background pool,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Limit on number of tasks in an associated background pool,8,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active tasks in BackgroundProcessingPool for moves,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Limit on number of tasks in BackgroundProcessingPool for moves,8,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Number of active tasks in BackgroundSchedulePool. This pool is used for periodic ReplicatedMergeTree tasks, like cleaning old data parts, altering data parts, replica re-initialization, etc.",1,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Limit on number of tasks in BackgroundSchedulePool. This pool is used for periodic ReplicatedMergeTree tasks, like cleaning old data parts, altering data parts, replica re-initialization, etc.",512,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active tasks in BackgroundBufferFlushSchedulePool. This pool is used for periodic Buffer flushes,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Limit on number of tasks in BackgroundBufferFlushSchedulePool,16,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active tasks in BackgroundDistributedSchedulePool. This pool is used for distributed sends that is done in background.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Limit on number of tasks in BackgroundDistributedSchedulePool,16,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active tasks in BackgroundMessageBrokerSchedulePool for message streaming,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Limit on number of tasks in BackgroundMessageBrokerSchedulePool for message streaming,16,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of 'batches' (a set of keys) in update queue in CacheDictionaries.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Exact number of keys in update queue in CacheDictionaries.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Disk space reserved for currently running background merges. It is slightly more than the total size of currently merging parts.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of connections to remote servers sending data that was INSERTed into Distributed tables. Both synchronous and asynchronous mode.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of running tasks which are paused and waiting due to 'priority' setting.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Number of connections to TCP server (clients with native interface), also included server-server distributed query connections",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of client connections using MySQL protocol,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of connections to HTTP server,1,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of connections from other replicas to fetch parts,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of client connections using PostgreSQL protocol,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of files open for reading,21,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of files open for writing,1,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of compress operations using internal compression codecs,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of decompress operations using internal compression codecs,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in all instances of ParallelCompressedWriteBuffer - these threads are doing parallel compression and writing,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in all instances of ParallelCompressedWriteBuffer that are currently waiting for buffer to become available for writing,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of temporary files created,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of temporary files created for external sorting,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of temporary files created for external aggregation,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of temporary files created for JOIN,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of temporary files for vertical merge,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of temporary files created without known purpose,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Number of read (read, pread, io_getevents, etc.) syscalls in fly",2,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of read with remote reader in fly,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Number of write (write, pwrite, io_getevents, etc.) syscalls in fly",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Number of threads receiving data from network. Only ClickHouse-related network interaction is included, not by 3rd party libraries.",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Number of threads sending data to network. Only ClickHouse-related network interaction is included, not by 3rd party libraries.",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of connections that are sending data for scalars to remote servers.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of connections that are sending data for external tables to remote servers. External tables are used to implement GLOBAL IN and GLOBAL JOIN operators with distributed subqueries.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of query processing threads,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of Replicated tables that are currently in readonly state due to re-initialization after ZooKeeper session loss or due to startup without ZooKeeper configured.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total amount of memory (bytes) allocated by the server.,228311357,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total amount of memory (bytes) allocated by the server not corrected by RSS.,12772155,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total amount of memory (bytes) allocated by background tasks (merges and mutations).,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of ephemeral nodes hold in ZooKeeper.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Number of sessions (connections) to ZooKeeper. Should be no more than one, because using more than one connection to ZooKeeper may lead to bugs due to lack of linearizability (stale reads) that ZooKeeper consistency model allows.",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of watches (event subscriptions) in ZooKeeper.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of requests to ZooKeeper in fly.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of INSERT queries that are throttled due to high number of active data parts for partition in a MergeTree table.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads waiting for lock in Context. This is global lock.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of rows in buffers of Buffer tables,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of bytes in buffers of Buffer tables,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of requests in fly to data sources of dictionaries of cache type.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Revision of the server. It is a number incremented for every release or release candidate except patch releases.,54499,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Version of the server in a single integer number in base-1000. For example, version 11.22.33 is translated to 11022033.",25005002,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads waiting for read on a table RWLock.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads waiting for write on a table RWLock.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads holding read lock in a table RWLock.,1,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads holding write lock in a table RWLock.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in global thread pool.,693,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in global thread pool running a task.,661,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in global thread pool.,661,2025-06-13 11:34:17
+2025-06-13 11:34:19,Obsolete. Number of threads in local thread pools. The threads in local thread pools are taken from the global thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Obsolete. Number of threads in local thread pools running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Obsolete. Number of queued or active jobs in local thread pools.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the MergeTreeDataSelectExecutor thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the MergeTreeDataSelectExecutor thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the MergeTreeDataSelectExecutor thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool for BACKUP.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in thread pool for BACKUP running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs for BACKUP.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool for RESTORE.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool for RESTORE running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs for RESTORE.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in thread pool for loading marks.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool for loading marks running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the thread pool for loading marks.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the IO prefetch thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the IO prefetch thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the IO prefetch thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the IO writer thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the IO writer thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the IO writer thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the IO thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the IO thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the IO thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in compression thread pools.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in compression thread pools running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in compression thread pools.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool for remote_filesystem_read_method=threadpool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool for remote_filesystem_read_method=threadpool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the thread pool for remote_filesystem_read_method=threadpool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool for local_filesystem_read_method=threadpool.,3,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool for local_filesystem_read_method=threadpool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the thread pool for local_filesystem_read_method=threadpool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the BackupsIO thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the BackupsIO thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the BackupsIO thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Obsolete metric, shows nothing.",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Obsolete metric, shows nothing.",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the StorageHive thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the StorageHive thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the StorageHive thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the tables loader background thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the tables loader background thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the tables loader background thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the tables loader foreground thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the tables loader foreground thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the tables loader foreground thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the DatabaseOnDisk thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the DatabaseOnDisk thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the DatabaseOnDisk thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the DatabaseBackup thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the DatabaseBackup thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the DatabaseBackup thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the DatabaseCatalog thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the DatabaseCatalog thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the DatabaseCatalog thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool for destroy aggregate states.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool for destroy aggregate states running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the thread pool for destroy aggregate states.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool for concurrent hash join.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool for concurrent hash join running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the thread pool for concurrent hash join.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the HashedDictionary thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the HashedDictionary thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the HashedDictionary thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the CacheDictionary thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the CacheDictionary thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the CacheDictionary thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the ParallelFormattingOutputFormatThreads thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the ParallelFormattingOutputFormatThreads thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the ParallelFormattingOutputFormatThreads thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the ParallelParsingInputFormat thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the ParallelParsingInputFormat thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the ParallelParsingInputFormat thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the MergeTreeBackgroundExecutor thread pool.,48,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the MergeTreeBackgroundExecutor thread pool running a task.,48,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the MergeTreeBackgroundExecutor thread pool.,48,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the AsynchronousInsert thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the AsynchronousInsert thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the AsynchronousInsert thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of pending tasks in the AsynchronousInsert queue.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of pending bytes in the AsynchronousInsert queue.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the StartupSystemTables thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the StartupSystemTables thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the StartupSystemTables thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the Aggregator thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the Aggregator thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the Aggregator thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the DDLWorker thread pool for ON CLUSTER queries.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the DDLWORKER thread pool for ON CLUSTER queries running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the DDLWORKER thread pool for ON CLUSTER queries.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the StorageDistributed thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the StorageDistributed thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the StorageDistributed thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads used for INSERT into Distributed.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads used for INSERT into Distributed running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs used for INSERT into Distributed.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the StorageS3 thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the StorageS3 thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the StorageS3 thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the S3ObjectStorage thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the S3ObjectStorage thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the S3ObjectStorage thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the remote table engines thread pools.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the remote table engines thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in remote table engines thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the AzureObjectStorage thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the AzureObjectStorage thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the AzureObjectStorage thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the build vector similarity index thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the build vector similarity index thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the build vector similarity index thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of registered servers in StorageS3(Azure)Queue,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the IcebergCatalog thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the IcebergCatalog thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the IcebergCatalog thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the threadpool for processing PARALLEL WITH queries.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active threads in the threadpool for processing PARALLEL WITH queries.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the threadpool for processing PARALLEL WITH queries.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of local-to-remote path entries in the 'plain_rewritable' in-memory map for AzureObjectStorage.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of file entries in the 'plain_rewritable' in-memory map for AzureObjectStorage.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of local-to-remote path entries in the 'plain_rewritable' in-memory map for LocalObjectStorage.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of file entries in the 'plain_rewritable' in-memory map for LocalObjectStorage.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of local-to-remote path entries in the 'plain_rewritable' in-memory map for S3ObjectStorage.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of file entries in the 'plain_rewritable' in-memory map for S3ObjectStorage.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads for ALTER TABLE FETCH PARTITION,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads for ALTER TABLE FETCH PARTITION fetching part,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active part fetches in ALTER TABLE FETCH PARTITION,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the MergeTree parts loader thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the MergeTree parts loader thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the MergeTree parts loader thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the threadpool for loading Outdated data parts.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active threads in the threadpool for loading Outdated data parts.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the threadpool for loading Outdated data parts.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the threadpool for loading Unexpected data parts.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active threads in the threadpool for loading Unexpected data parts.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the threadpool for loading Unexpected data parts.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the MergeTree parts cleaner thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the MergeTree parts cleaner thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the MergeTree parts cleaner thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the threadpool for table creation in DatabaseReplicated.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active threads in the threadpool for table creation in DatabaseReplicated.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the threadpool for table creation in DatabaseReplicated.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads for copying data between disks of different types.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads for copying data between disks of different types running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs for copying data between disks of different types.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the system.replicas thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the system.replicas thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the system.replicas thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the RESTART REPLICA thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the RESTART REPLICA thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the RESTART REPLICA thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the PipelineExecutor thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the PipelineExecutor thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the PipelineExecutor thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the ParquetBlockInputFormat thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the ParquetBlockInputFormat thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the ParquetBlockInputFormat thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the ParquetBlockInputFormat io thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the ParquetBlockInputFormat io thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the ParquetBlockInputFormat io thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in ParquetBlockOutputFormat thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in ParquetBlockOutputFormat thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in ParquetBlockOutputFormat thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool used for subcolumns reading in MergeTree.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pool used for subcolumns reading in MergeTree running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the thread pool used for subcolumns reading in MergeTree.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the DWARFBlockInputFormat thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the DWARFBlockInputFormat thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the DWARFBlockInputFormat thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the threadpool for loading Outdated data parts.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active threads in the threadpool for loading Outdated data parts.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the threadpool for loading Outdated data parts.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the threadpool for polygon dictionaries.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active threads in the threadpool for polygon dictionaries.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the threadpool for polygon dictionaries.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of pending bytes to process for asynchronous insertion into Distributed tables. Number of bytes for every shard is summed.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of bytes for asynchronous insertion into Distributed tables that has been marked as broken. Number of bytes for every shard is summed.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of pending files to process for asynchronous insertion into Distributed tables. Number of files for every shard is summed.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of files for asynchronous insertion into Distributed tables that has been marked as broken. Number of files for every shard is summed.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Number of dropped tables, that are waiting for background data removal.",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Max processed DDL entry of DDLWorker.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Max DDL entry of DDLWorker that pushed to zookeeper.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"The part is generating now, it is not in data_parts list.",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Deprecated. See PartsPreActive.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Deprecated. See PartsActive.,26,2025-06-13 11:34:17
+2025-06-13 11:34:19,"The part is in data_parts, but not used for SELECTs.",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Active data part, used by current and upcoming SELECTs.",26,2025-06-13 11:34:17
+2025-06-13 11:34:19,Active databases.,5,2025-06-13 11:34:17
+2025-06-13 11:34:19,Active tables.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Active replicated tables.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Active views.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Active dictionaries.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Not active data part, but could be used by only current SELECTs, could be deleted after SELECTs finishes.",443,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Not active data part with identity refcounter, it is deleting right now by a cleaner.",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Part was moved to another disk and should be deleted in own destructor.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Wide parts.,53,2025-06-13 11:34:17
+2025-06-13 11:34:19,Compact parts.,416,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total number of mmapped files.,1,2025-06-13 11:34:17
+2025-06-13 11:34:19,Sum size of mmapped file regions.,588351288,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads waiting for asynchronous read.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of asynchronous inserts that are waiting for flush.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active Kafka consumers,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active Kafka consumers which have some partitions assigned.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active Kafka producer created,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active librdkafka threads,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of background reads currently working (populating materialized views from Kafka),0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of consumers which are currently used by direct or background reads,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of currently running inserts to Kafka,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of partitions Kafka tables currently assigned to,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active cache buffers,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of existing cache file segments,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of existing detached cache file segments,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Filesystem cache size in bytes,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Filesystem cache size limit in bytes,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Filesystem cache elements (file segments),0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Filesystem cache elements in download queue,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Filesystem cache elements in background cleanup queue,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Filesystem cache file segment which are currently hold as unreleasable,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of async insert hash id in cache,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Size of the iceberg metadata cache in bytes,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Size of the vector similarity index cache in bytes,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,S3 requests count,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of alive connections,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of outstanding requests,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of waiting threads inside of OvercommitTracker,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of io_uring SQEs waiting to be submitted,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of io_uring SQEs in flight,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,The current number of callback requests in flight from the remote server back to the initiator server to choose the read task (for s3Cluster table function and similar). Measured on the remote server side.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,The current number of callback requests in flight from the remote server back to the initiator server to choose the read task (for MergeTree tables). Measured on the remote server side.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,The current number of announcement being sent in flight from the remote server to the initiator server about the set of data parts (for MergeTree tables). Measured on the remote server side.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of Created thread local timers in QueryProfiler,84,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of Active thread local timers in QueryProfiler,2,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number materialized views with periodic refreshing (REFRESH),0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of materialized views currently executing a refresh,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads for background flushes in StorageBuffer,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads for background flushes in StorageBuffer running a task,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active threads for background flushes in StorageBuffer,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pools in internals of SharedMergeTree,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the thread pools in internals of SharedMergeTree running a task,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active threads in the thread pools in internals of SharedMergeTree,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of fetches in progress,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total size of remote file segments waiting to be asynchronously loaded into filesystem cache.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of open connections to Distributed Cache,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of currently used connections to Distributed Cache,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of currently allocated connections to Distributed Cache connection pool,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of currently borrowed connections to Distributed Cache connection pool,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of executed Read requests to Distributed Cache,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of executed Write requests to Distributed Cache,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of open connections to ClickHouse server from Distributed Cache,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of distributed cache registered servers,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of distributed cache registered servers in current az,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of distributed cache S3 cached clients,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active connections to ClickHouse server from Distributed Cache (not marked as cancelled because of limit),0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of IO reads are being scheduled currently,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of IO writes are being scheduled currently,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total count of sessions stored in the session pool for storages,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total count of all sessions: stored in the pool and actively used right now for storages,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total count of sessions stored in the session pool for disks,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total count of all sessions: stored in the pool and actively used right now for disks,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total count of sessions stored in the session pool for http hosts,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total count of all sessions: stored in the pool and actively used right now for http hosts,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total count of addresses which are used for creation connections with connection pools,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total count of addresses which are banned as faulty for creation connections with connection pools,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads currently doing filtering of mark ranges by the primary key,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads currently doing filtering of mark ranges by secondary keys,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total number of CPU slot requests are being scheduled currently,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total number of acquired CPU slots,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Total number of acquired CPU slots that are not considered competing (the first thread if fair_round_robin scheduler is in use),0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Value of soft limit on number of CPU slots,16,2025-06-13 11:34:17
+2025-06-13 11:34:19,The number of `NoSuchKey` errors that occur when reading data from S3 cloud storage through ClickHouse disks.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the threadpool for state application in Shared Catalog.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active threads in the threadpool for state application in Shared Catalog.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the threadpool for state application in Shared Catalog.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the threadpool for drop of local tables in Shared Catalog.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active threads in the threadpool for drop of local tables in Shared Catalog.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the threadpool for drop of local tables in Shared Catalog.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the threadpool for drop of object in ZooKeeper in Shared Catalog.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of active threads in the threadpool for drop of object in ZooKeeper in Shared Catalog.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the threadpool for drop of object in ZooKeeper in Shared Catalog.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of running merges visible for merge coordinator.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of assigned merges in merge coordinator state.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of assigned merges in merge worker state.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of tables in the queue for local drop or detach in Shared Catalog.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of errors that occurred when attempting to drop or detach local tables in Shared Catalog.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of objects in disk metadata cache.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Remaining seconds of the license validity period.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"State of startup scripts execution: 0 = not finished, 1 = success, 2 = failure.",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Indicates if the server is shutting down: 0 = no, 1 = yes",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Number of all failed merges since startup, including the ones that were aborted",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,"Number of failed merges since startup, excluding the merges that were aborted",0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the stateless worker thread pool.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of threads in the stateless worker thread pool running a task.,0,2025-06-13 11:34:17
+2025-06-13 11:34:19,Number of queued or active jobs in the stateless worker thread pool.,0,2025-06-13 11:34:17
