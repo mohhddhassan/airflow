@@ -1,33 +1,42 @@
-from airflow import DAG
-from airflow.operators.python import PythonOperator
-from datetime import datetime, timedelta
-import sys
+import clickhouse_connect
+import pandas as pd
+from datetime import datetime
+import os
+import csv
 
-# Include the scripts folder in the Python path
-sys.path.append('/opt/airflow/scripts')
-from extract_clickhouse_metrics import extract_and_save_metrics
-
-
-default_args = {
-    'owner': 'airflow',
-    'retries': 1,
-    'retry_delay': timedelta(minutes=5),
-}
-
-with DAG(
-    dag_id='hourly_clickhouse_metrics_dag',
-    default_args=default_args,
-    description='Extract metrics from ClickHouse and store in CSV hourly',
-    schedule_interval='@hourly',
-    start_date=datetime(2025, 6, 13),
-    catchup=False,
-    tags=['clickhouse', 'csv', 'hourly'],
-) as dag:
-
-    extract_task = PythonOperator(
-        task_id='extract_clickhouse_metrics',
-        python_callable=extract_and_save_metrics,
-        op_kwargs={'execution_time': '{{ execution_date }}'},
+def extract_and_save_metrics(execution_time: str):
+    # Connect to ClickHouse
+    client = clickhouse_connect.get_client(
+        host='clickhouse-server',
+        user='airflow',
+        password='airflow_pass',
+        database='system'
     )
 
-    extract_task
+    # Query system metrics
+    result = client.query("SELECT now() AS timestamp, description AS metric_name, value FROM system.metrics")
+    rows = result.result_rows
+
+    # File path and headers
+    dag_time = datetime.fromisoformat(execution_time)
+    filename = f"metrics_{dag_time.strftime('%Y-%m-%d')}.csv"  # one file per day
+    filepath = f"/opt/airflow/output/{filename}"
+    file_exists = os.path.isfile(filepath)
+
+    # Append each row to CSV
+    with open(filepath, mode='a', newline='') as f:
+        writer = csv.writer(f)
+
+        # Write header only if file doesn't exist
+        if not file_exists:
+            writer.writerow(['timestamp', 'metric_name', 'value', 'dag_run_time'])
+
+        for row in rows:
+            writer.writerow([
+                row[0],            # timestamp from ClickHouse
+                row[1],            # metric_name
+                row[2],            # value
+                dag_time.strftime('%Y-%m-%d %H:%M:%S')  # DAG run time
+            ])
+
+    print(f"✅ Metrics appended to: {filepath}")

@@ -4686,3 +4686,10 @@
 [2025-06-13T11:37:53.704+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:37:53.704+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-13T11:37:53.739+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:37:53.739+0000] {dag.py:3954} INFO - Setting next_dagrun for even_odd_branching to 2025-06-13 11:30:00+00:00, run_after=2025-06-13 11:35:00+00:00
 [2025-06-13T11:37:53.773+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/even_odd_branching.py took 0.153 seconds
+[2025-06-13T11:38:24.484+0000] {processor.py:161} INFO - Started process (PID=360) to work on /opt/airflow/dags/even_odd_branching.py
+[2025-06-13T11:38:24.485+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/even_odd_branching.py for tasks to queue
+[2025-06-13T11:38:24.487+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:38:24.486+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/even_odd_branching.py
+[2025-06-13T11:38:24.501+0000] {processor.py:840} INFO - DAG(s) 'even_odd_branching' retrieved from /opt/airflow/dags/even_odd_branching.py
+[2025-06-13T11:38:24.533+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:38:24.533+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-13T11:38:24.565+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:38:24.565+0000] {dag.py:3954} INFO - Setting next_dagrun for even_odd_branching to 2025-06-13 11:30:00+00:00, run_after=2025-06-13 11:35:00+00:00
+[2025-06-13T11:38:24.590+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/even_odd_branching.py took 0.114 seconds

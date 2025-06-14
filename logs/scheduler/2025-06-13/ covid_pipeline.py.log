@@ -4686,3 +4686,10 @@
 [2025-06-13T11:37:53.675+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:37:53.675+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-13T11:37:53.711+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:37:53.710+0000] {dag.py:3954} INFO - Setting next_dagrun for covid_data_pipeline to 2025-06-12 00:00:00+00:00, run_after=2025-06-13 00:00:00+00:00
 [2025-06-13T11:37:53.740+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ covid_pipeline.py took 0.136 seconds
+[2025-06-13T11:38:24.456+0000] {processor.py:161} INFO - Started process (PID=359) to work on /opt/airflow/dags/ covid_pipeline.py
+[2025-06-13T11:38:24.456+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ covid_pipeline.py for tasks to queue
+[2025-06-13T11:38:24.458+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:38:24.458+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/ covid_pipeline.py
+[2025-06-13T11:38:24.471+0000] {processor.py:840} INFO - DAG(s) 'covid_data_pipeline' retrieved from /opt/airflow/dags/ covid_pipeline.py
+[2025-06-13T11:38:24.498+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:38:24.498+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-13T11:38:24.529+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:38:24.528+0000] {dag.py:3954} INFO - Setting next_dagrun for covid_data_pipeline to 2025-06-12 00:00:00+00:00, run_after=2025-06-13 00:00:00+00:00
+[2025-06-13T11:38:24.552+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ covid_pipeline.py took 0.103 seconds

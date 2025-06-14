@@ -5851,3 +5851,10 @@ ModuleNotFoundError: No module named 'clickhouse_connect'
 [2025-06-13T11:37:53.501+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:37:53.500+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-06-13T11:37:53.536+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:37:53.536+0000] {dag.py:3954} INFO - Setting next_dagrun for clickhouse_metrics_checker to 2025-06-13 10:00:00+00:00, run_after=2025-06-13 11:00:00+00:00
 [2025-06-13T11:37:53.563+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/clickhouse_metrics_dag.py took 0.610 seconds
+[2025-06-13T11:38:23.962+0000] {processor.py:161} INFO - Started process (PID=355) to work on /opt/airflow/dags/clickhouse_metrics_dag.py
+[2025-06-13T11:38:23.963+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/clickhouse_metrics_dag.py for tasks to queue
+[2025-06-13T11:38:23.965+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:38:23.965+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/clickhouse_metrics_dag.py
+[2025-06-13T11:38:24.337+0000] {processor.py:840} INFO - DAG(s) 'clickhouse_metrics_checker' retrieved from /opt/airflow/dags/clickhouse_metrics_dag.py
+[2025-06-13T11:38:24.365+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:38:24.364+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-06-13T11:38:24.390+0000] {logging_mixin.py:188} INFO - [2025-06-13T11:38:24.389+0000] {dag.py:3954} INFO - Setting next_dagrun for clickhouse_metrics_checker to 2025-06-13 10:00:00+00:00, run_after=2025-06-13 11:00:00+00:00
+[2025-06-13T11:38:24.413+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/clickhouse_metrics_dag.py took 0.461 seconds
