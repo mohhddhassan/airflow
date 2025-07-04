@@ -1,1 +1,0 @@
-[2025-06-11T05:29:18.956+0000] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: even_odd_branching_example.branching scheduled__2025-06-11T04:00:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?
